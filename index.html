@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build PC - Xây dựng cấu hình PC Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="floating-particles"></div>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>BUILD PC GAMING</h1>
+            <p>Xây dựng cấu hình PC Gaming theo nhu cầu - Chuyên nghiệp, Uy tín, Giá tốt nhất</p>
+        </div>
+    
+
+        <div class="build-section">
+            <div class="components-area">
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">🧠</div>
+                            CPU - Bộ xử lý
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('cpu')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="cpu-text">Chọn CPU</div>
+                            <div class="selector-price" id="cpu-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">✍️</div>
+                            GPU - Card đồ họa
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('gpu')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="gpu-text">Chọn GPU</div>
+                            <div class="selector-price" id="gpu-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">🖴</div>
+                            RAM - Bộ nhớ
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('ram')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="ram-text">Chọn RAM</div>
+                            <div class="selector-price" id="ram-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">💶</div>
+                            Motherboard - Bo mạch chủ
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('motherboard')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="motherboard-text">Chọn Motherboard</div>
+                            <div class="selector-price" id="motherboard-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">💾</div>
+                            Storage - Ổ cứng
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('storage')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="storage-text">Chọn Storage</div>
+                            <div class="selector-price" id="storage-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">⚡</div>
+                            PSU - Nguồn
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('psu')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="psu-text">Chọn PSU</div>
+                            <div class="selector-price" id="psu-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">📦</div>
+                            Case - Vỏ máy
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('case')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="case-text">Chọn Case</div>
+                            <div class="selector-price" id="case-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+
+                                <div class="component-category">
+                    <div class="component-header">
+                        <div class="component-title">
+                            <div class="component-icon">🌪️</div>
+                            Cooler - Quạt tản nhiệt
+                        </div>
+                    </div>
+                    <div class="component-selector" onclick="openModal('cooler')">
+                        <div class="selector-content">
+                            <div class="selector-text selector-placeholder" id="cooler-text">Chọn quạt tản nhiệt</div>
+                            <div class="selector-price" id="cooler-price"></div>
+                        </div>
+                        <div class="selector-arrow">▼</div>
+                    </div>
+                </div>
+            </div>
+
+
+            
+            <div class="summary-panel">
+                <h3 class="summary-title">Linh kiện đã chọn</h3>
+                
+                <div class="summary-item">
+                    <span class="summary-component">CPU:</span>
+                    <span class="summary-price" id="cpu-summary">Chưa chọn</span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-component">GPU:</span>
+                    <span class="summary-price" id="gpu-summary">Chưa chọn</span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-component">RAM:</span>
+                    <span class="summary-price" id="ram-summary">Chưa chọn</span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-component">MOTHERBOARD:</span>
+                    <span class="summary-price" id="motherboard-summary">Chưa chọn</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span class="summary-component">STORAGE:</span>
+                    <span class="summary-price" id="storage-summary">Chưa chọn</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span class="summary-component">PSU:</span>
+                    <span class="summary-price" id="psu-summary">Chưa chọn</span>
+                </div>
+                
+                <div class="summary-item">
+                    <span class="summary-component">Case:</span>
+                    <span class="summary-price" id="case-summary">Chưa chọn</span>
+                </div>
+
+                <div class="summary-item">
+                    <span class="summary-component">COOLER:</span>
+                    <span class="summary-price" id="cooler-summary">Chưa chọn</span>
+                </div>
+
+                <div class="total-section">
+                    <div class="total-price" id="total-price">0₫</div>
+                    <button class="build-button" onclick="buildPC()">
+                        🚀 XÂY DỰNG PC NGAY
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>            
+
+        <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modalTitle">Chọn sản phẩm</h2>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div class="filter-bar">
+                    <input type="text" class="filter-input" id="searchInput" placeholder="🔍 Tìm kiếm sản phẩm...">
+                    <select class="filter-select" id="brandFilter">
+                        <option value="">Tất cả thương hiệu</option>
+                    </select>
+                    <select class="filter-select" id="priceFilter">
+                        <option value="">Tất cả mức giá</option>
+                        <option value="under5">Dưới 5 triệu</option>
+                        <option value="5to10">5-10 triệu</option>
+                        <option value="10to20">10-20 triệu</option>
+                        <option value="over20">Trên 20 triệu</option>
+                    </select>
+                </div>
+
+                <div id="productsContainer">
+                    <div class="loading">⏳ Đang tải sản phẩm...</div>
+                </div>
+
+                <div class="pagination" id="pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
